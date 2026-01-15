@@ -3,6 +3,7 @@
 import streamlit as st
 import pickle
 import re
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 from nltk.stem.porter import PorterStemmer
@@ -97,4 +98,5 @@ if selected is not None:
 st.write(' ')
 
 st.markdown('This tool provides AI-based predictions and should not be considered as absolute truth.', text_alignment = 'center' )
+
 
