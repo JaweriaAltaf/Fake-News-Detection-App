@@ -15,8 +15,8 @@ vect = TfidfVectorizer()
 
 # Load vector and model
 
-vector_form = pickle.load(open('Fake_News_Detection_Using_NLP/vector.pkl', 'rb'))
-load_svm = pickle.load(open('Fake_News_Detection_Using_NLP/model.pkl','rb'))
+vector_form = pickle.load(open('vector.pkl', 'rb'))
+load_svm = pickle.load(open('model.pkl','rb'))
 
 # paste function here
 stop_words = set(stopwords.words('english'))
@@ -97,3 +97,4 @@ if selected is not None:
 st.write(' ')
 
 st.markdown('This tool provides AI-based predictions and should not be considered as absolute truth.', text_alignment = 'center' )
+
