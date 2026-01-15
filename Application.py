@@ -3,18 +3,10 @@
 import streamlit as st
 import pickle
 import re
+from nltk.corpus import stopwords
 
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
-
-import nltk
-from nltk.corpus import stopwords
-
-try:
-    stopwords.words('english')
-except LookupError:
-    nltk.download('stopwords')
-
 
 # intialization 
 
@@ -103,4 +95,5 @@ if selected is not None:
     st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
 
 st.write(' ')
+
 st.markdown('This tool provides AI-based predictions and should not be considered as absolute truth.', text_alignment = 'center' )
